@@ -1,6 +1,10 @@
 var searchBar = document.getElementById('searchBar')
 var submitBtn = document.getElementById('submitBtn')
 var listResults = document.getElementById('listResults')
+function saveRecipe(recipe) {
+    console.log(recipe)
+    JSON.stringify(recipe)
+}
 
 submitBtn.addEventListener("click", fetchRecipes)
 function fetchRecipes() {
@@ -20,12 +24,7 @@ function fetchRecipes() {
     }); 
 } 
 
-function displayRecipes(recipes) {
-    console.log(recipes)
-    listResults.innerHTML = ""
-
-    for (let i = 0; i <recipes.length; i++) {
-    let recipe = recipes[i];
+function renderRecipeListItem(recipe) {
     let li = document.createElement("li");
     let recipeTitle = document.createElement("h3")
     let recipeServings = document.createElement("h4")
@@ -51,6 +50,20 @@ function displayRecipes(recipes) {
     recipeInstructions.innerText = recipe.instructions;
     li.appendChild(recipeInstructions)
 
-    listResults.appendChild(li);
-}
+    saveButton.innerText = "Save"
+    li.appendChild(saveButton)
+
+    saveButton.addEventListener("click", () => saveRecipe(recipe))
+
+    return li;
+    }
+
+function displayRecipes(recipes) {
+    console.log(recipes)
+    listResults.innerHTML = ""
+
+    for (let i = 0; i <recipes.length; i++) {
+        let li = renderRecipeListItem(recipes[i]);
+        listResults.appendChild(li);
+    }
 }
