@@ -12,23 +12,29 @@
     
     
 </head>
- <!-- fixed the missing body   -->
+
+
 <body>
     <nav class="navbar bg-body-tertiary navbar bg-dark">
         <img class="container-fluid justify-content-start">
         <!-- cookbook icon  -->
-         <a href="cookbook.html"><i class="fa-solid fa-book"></i></a>
+         <a href="cookbook.html"><i class="cookbookbtn fa-solid fa-book"></i></a>
         <button type="button" class=" randombtn btn btn-outline-light"> Recipe Randommizer</button>
     </nav>
 
-    
-    <input type="search" id="searchBar">
-    <button type="button" id="submitBtn">Submit</button>
+    <div class="searchbar">
+        <input type="search" id="searchBar ">
+        <button type="button" id="submitBtn">Submit</button>
+    </div>
+
 
     <h1>Results</h1>
     <ul id="listResults"></ul>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <footer>
+        <p>Copyright © 2023</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
