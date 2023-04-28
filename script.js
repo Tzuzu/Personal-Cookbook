@@ -6,6 +6,12 @@ function saveRecipe(recipe) {
     JSON.stringify(recipe)
 }
 
+function saveRecipe(recipe) {
+    console.log(recipe)
+    JSON.stringify(recipe)
+    localStorage.setItem("recipes", JSON.stringify(recipe));
+}
+
 submitBtn.addEventListener("click", fetchRecipes)
 function fetchRecipes() {
     var query = searchBar.value.trim()
