@@ -1,6 +1,10 @@
 var searchBar = document.getElementById('searchBar')
 var submitBtn = document.getElementById('submitBtn')
 var listResults = document.getElementById('listResults')
+function saveRecipe(recipe) {
+    console.log(recipe)
+    JSON.stringify(recipe)
+}
 
 function saveRecipe(recipe) {
     console.log(recipe)
