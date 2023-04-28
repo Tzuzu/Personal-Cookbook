@@ -1,0 +1,57 @@
+nav button {
+    margin-right: 10px;
+}
+.back{
+    margin-right: 20px;
+    font-size: 40px;
+    color: white;
+}
+.cookbookbtn {
+    margin-left: 10px;
+    font-size: 30px;
+    color: white;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+}
+.cookbookbtn:hover {
+    color: #ffffffcb;
+    text-shadow: 0 0 8px #ffee10;
+    transition: .5s;
+}
+.back:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 8px #c70000;
+    transition: .5s;
+}
+
+
+
+.searchbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+#searchBar {
+    width: 80%;
+    margin-right: 10px;
+}
+
+
+
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f5f5f5;
+    color: #333;
+    text-align: center;
+    padding: 10px;
+  }
+  
