@@ -4,6 +4,7 @@ var listResults = document.getElementById('listResults')
 function saveRecipe(recipe) {
     console.log(recipe)
     JSON.stringify(recipe)
+    localStorage.setItem("recipes", JSON.stringify(recipe));
 }
 
 submitBtn.addEventListener("click", fetchRecipes)
