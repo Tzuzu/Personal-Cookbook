@@ -76,3 +76,17 @@ function displayRecipes(recipes) {
         listResults.appendChild(li);
     }
 }
+
+//making the bbackground image load
+var images = [
+    './assets/imiges/image1.jpg',
+    './assets/imiges/image2.jpg',
+    './assets/imiges/image3.jpg',
+    './assets/imiges/image4.jpg',
+  ];
+
+  let index = 0;
+  setInterval(() => {
+    index = (index + 1) % images.length;
+    document.querySelector('.background').style.backgroundImage = `url(${images[index]})`;
+  }, 5000);
