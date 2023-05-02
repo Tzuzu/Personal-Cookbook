@@ -20,6 +20,27 @@
     <h1>Your Personal Cookbook</h1>
     <p id="personalBook">Your saved recipes will appear here, click the delete button to remove it from your list.</p>
 
+    <h2>Submit your own recipe!</h2>
+    <form>
+        <div class="form-group">
+            <label for="recipeName">Recipe Name</label>
+            <input type="text" class="textInput" id="recipeTitle" placeholder="Give your recipe a name!">
+        </div>
+        <div class="form-group">
+            <label for="servingSize">Serving Size</label>
+            <input type="text" class="textInput" id="recipeServings" placeholder="How many servings is your recipe?">
+        </div>
+        <div class="form-group">
+            <label for="ingredients">Ingredients Needed</label>
+            <input type="text" class="textInput" id="recipeIngredients" placeholder="Enter your ingredients here">
+            <p><small>Separate your ingredients with a | (Example: Eggs|Milk|Cheese)</small></p>
+        </div>
+        <div class="form-group">
+            <label for="instructions">Instructions</label>
+            <input type="text" class="textInput" id="recipeInstructions" placeholder="Type your instructions here">
+        </div>
+        <button id="recipeSave">Save Recipe</button>
+    </form>
     <footer>
         <p>my cookbook © 2023</p>
     </footer>
