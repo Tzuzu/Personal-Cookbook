@@ -1,16 +1,17 @@
 var searchBar = document.getElementById('searchBar')
 var submitBtn = document.getElementById('submitBtn')
 var listResults = document.getElementById('listResults')
-function saveRecipe(recipe) {
-    console.log(recipe)
-    JSON.stringify(recipe)
-}
+
+// Function used to save a recipe to local storage
 
 function saveRecipe(recipe) {
-    console.log(recipe)
-    JSON.stringify(recipe)
-    localStorage.setItem("recipes", JSON.stringify(recipe));
+    let savedRecipesStr = localStorage.getItem("recipes");
+    let savedRecipes = savedRecipesStr === null ? [] : JSON.parse(savedRecipesStr);
+    savedRecipes.push(recipe);
+    localStorage.setItem("recipes", JSON.stringify(savedRecipes));
 }
+
+// Function to fetch recipes from the API
 
 submitBtn.addEventListener("click", fetchRecipes)
 function fetchRecipes() {
@@ -29,6 +30,8 @@ function fetchRecipes() {
         }
     }); 
 } 
+
+// Creates and formats the list of search results from the API
 
 function renderRecipeListItem(recipe) {
     let li = document.createElement("li");
