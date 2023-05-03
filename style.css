@@ -1,11 +1,7 @@
 nav button {
     margin-right: 10px;
 }
-.back{
-    margin-right: 20px;
-    font-size: 40px;
-    color: white;
-}
+
 .cookbookbtn {
     margin-left: 10px;
     font-size: 30px;
@@ -22,14 +18,8 @@ nav {
     text-shadow: 0 0 8px #ffee10;
     transition: .5s;
 }
-.back:hover {
-    color: rgb(255, 255, 255);
-    text-shadow: 0 0 8px #c70000;
-    transition: .5s;
-}
 
- /* chanin images*/
- .background {
+.background {
     position: fixed;
     top: 0;
     left: 0;
@@ -62,6 +52,7 @@ nav {
     align-items: center;
     margin-top: 20px;
 }
+
 #searchBar {
     width: 80%;
     margin-right: 10px;
@@ -82,5 +73,93 @@ footer {
     color: #333;
     text-align: center;
     padding: 10px;
+}
+
+/* added the css for cookbook'*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.back{
+    margin-right: 20px;
+    font-size: 40px;
+    color: white;
+    position: absolute;
+    right: 0;
+}
+.back:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 8px #c70000;
+    transition: .5s;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.page-content {
+  display: flex;
+  height: 100%;
+  flex-wrap: wrap;
+}
+
+.sidebar {
+  width: 30%;
+  background-color: #eee;
+  padding: 20px;
+}
+
+.main-content {
+  width: 70%;
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.main-content p {
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.main-content.active {
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+}
+
+.extra-bar {
+  background-color: #ddd;
+  padding: 20px;
+  color: black;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%;
   }
+
+  .main-content {
+    width: 100%;
+    height: 70%;
+  }
+}
   
