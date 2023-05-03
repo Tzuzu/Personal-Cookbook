@@ -1,7 +1,6 @@
 var searchBar = document.getElementById('searchBar')
 var submitBtn = document.getElementById('submitBtn')
 var listResults = document.getElementById('listResults')
-
 // Function used to save a recipe to local storage
 
 function saveRecipe(recipe) {
@@ -88,4 +87,4 @@ var images = [
   setInterval(() => {
     index = (index + 1) % images.length;
     document.querySelector('.background').style.backgroundImage = `url(${images[index]})`;
-  }, 5000);
+}, 5000);
