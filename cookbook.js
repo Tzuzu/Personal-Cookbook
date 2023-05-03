@@ -6,6 +6,8 @@ var saveButton = document.getElementById('recipeSave')
 var warning = document.getElementById('warning')
 var recipesList = document.getElementById('recipesList')
 
+// Saves a custom recipe to local storage
+
 function saveRecipe(recipe) {
     let savedRecipesStr = localStorage.getItem("recipes");
     let savedRecipes = savedRecipesStr === null ? [] : JSON.parse(savedRecipesStr);
@@ -31,6 +33,7 @@ function saveUserRecipe(event) {
     ingredients.value = ""
     instructions.value = ""
     warning.style.display="none"
+    displayRecipesFromLocalStorage()
 }
 
 // Creates and formats the list of saved items from the Local Storage
@@ -59,6 +62,28 @@ function renderRecipeListItem(recipe) {
 
     recipeInstructions.innerText = recipe.instructions;
     li.appendChild(recipeInstructions)
+
+    return li;
 }
+
+// Displays Saved Recipes 
+
+function displayRecipes(recipes) {
+    console.log(recipes)
+    recipesList.innerHTML = ""
+
+    for (let i = 0; i <recipes.length; i++) {
+        let li = renderRecipeListItem(recipes[i]);
+        recipesList.appendChild(li);
+    }
+}
+
+function displayRecipesFromLocalStorage() {
+    let savedRecipesStr = localStorage.getItem("recipes");
+    let savedRecipes = savedRecipesStr === null ? [] : JSON.parse(savedRecipesStr);
+    displayRecipes(savedRecipes);
+}
+
+displayRecipesFromLocalStorage()
 
 

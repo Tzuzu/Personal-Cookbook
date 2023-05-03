@@ -68,7 +68,6 @@ function renderRecipeListItem(recipe) {
     }
 
 function displayRecipes(recipes) {
-    console.log(recipes)
     listResults.innerHTML = ""
 
     for (let i = 0; i <recipes.length; i++) {
