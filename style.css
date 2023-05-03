@@ -45,7 +45,6 @@ nav {
  /* chanin images*/
 
 
-
 .searchbar {
     display: flex;
     justify-content: center;
@@ -61,6 +60,24 @@ nav {
 #warning {
     display: none;
     color: red;
+}
+
+
+h1 {
+  color: white;
+  margin: 5px;
+
+}
+
+.results {
+  max-width: 90%;
+  text-align: center;
+  padding: 10px 10px 5px 10px;
+  color: #fff;
+  background-color: #000000c0;
+  border: 4px solid #000000;
+  border-radius: 5px;
+  margin-bottom: 20px;
 }
 
 
