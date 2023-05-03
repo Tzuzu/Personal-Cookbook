@@ -59,9 +59,6 @@ function renderRecipeListItem(recipe) {
 
     recipeInstructions.innerText = recipe.instructions;
     li.appendChild(recipeInstructions)
-
-    deleteButton.innerText = "Delete"
-    li.appendChild(deleteButton)
 }
 
 
