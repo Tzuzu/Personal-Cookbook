@@ -1,14 +1,36 @@
-// Deletes an item from the local storage
+var title = document.getElementById('recipeTitle')
+var servings = document.getElementById('recipeServings')
+var ingredients = document.getElementById('recipeIngredients')
+var instructions = document.getElementById('recipeInstructions')
+var saveButton = document.getElementById('recipeSave')
+var warning = document.getElementById('warning')
+var recipesList = document.getElementById('recipesList')
 
-var deleteBtn = document.getElementById('deleteButton')
-
-deleteBtn.addEventListener("click", () => deleteRecipe(recipe.title))
-
-function deleteRecipe(recipeTitle) {
+function saveRecipe(recipe) {
     let savedRecipesStr = localStorage.getItem("recipes");
     let savedRecipes = savedRecipesStr === null ? [] : JSON.parse(savedRecipesStr);
-    savedRecipes = savedRecipes.filter(r => r.title !== recipeTitle);
+    savedRecipes.push(recipe);
     localStorage.setItem("recipes", JSON.stringify(savedRecipes));
+}
+
+saveButton.addEventListener("click", saveUserRecipe)
+function saveUserRecipe(event) {
+    event.preventDefault()
+    var recipeTitle = title.value.trim()
+    var recipeServings = servings.value.trim()
+    var recipeIngredients = ingredients.value.trim()
+    var recipeInstructions = instructions.value.trim()
+    if (!recipeTitle || !recipeServings || !recipeIngredients || !recipeInstructions) {
+        warning.style.display="block"
+        return;
+    }
+    var recipe = {"title":recipeTitle, "servings":recipeServings, "ingredients":recipeIngredients, "instructions":recipeInstructions}
+    saveRecipe(recipe)
+    title.value = ""
+    servings.value = ""
+    ingredients.value = ""
+    instructions.value = ""
+    warning.style.display="none"
 }
 
 // Creates and formats the list of saved items from the Local Storage
@@ -42,15 +64,4 @@ function renderRecipeListItem(recipe) {
     li.appendChild(deleteButton)
 }
 
-var images = [
-    './assets/imiges/image1.jpg',
-    './assets/imiges/image2.jpg',
-    './assets/imiges/image3.jpg',
-    './assets/imiges/image4.jpg',
-  ];
 
-  let index = 0;
-  setInterval(() => {
-    index = (index + 1) % images.length;
-    document.querySelector('.background').style.backgroundImage = `url(${images[index]})`;
-  }, 5000);

@@ -67,7 +67,10 @@ nav {
     margin-right: 10px;
 }
 
-
+#warning {
+    display: none;
+    color: red;
+}
 
 
 footer {
