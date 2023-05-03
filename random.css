@@ -60,7 +60,7 @@ html {
     right: 0;
 }
 .back:hover {
-    color: rgb(255, 255, 255);
-    text-shadow: 0 0 8px #c70000;
-    transition: .5s;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 8px #c70000;
+  transition: .5s;
 }
