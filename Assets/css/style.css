@@ -173,7 +173,7 @@ body {
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
 }
 
-button {
+#recipeSave {
   display: block;
   width: 100%;
   padding: 10px;
@@ -185,7 +185,7 @@ button {
   transition: background-color 0.2s ease-in-out;
 }
 
-button:hover {
+#recipeSave:hover {
   background-color: #3E8E41;
 }
 
