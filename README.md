@@ -2,7 +2,7 @@
 
 ## Website
 
-![Cookbook Website](/assets/images/example.jpg)
+![Cookbook Website](/Assets/images/example.jpg)
 
 To view the website, please go [here](https://tzuzu.github.io/Personal-Cookbook/)
 
