@@ -77,10 +77,10 @@ function displayRecipes(recipes) {
 
 //making the bbackground image load
 var images = [
-    './assets/imiges/image1.jpg',
-    './assets/imiges/image2.jpg',
-    './assets/imiges/image3.jpg',
-    './assets/imiges/image4.jpg',
+    './Assets/images/image1.jpg',
+    './Assets/images/image2.jpg',
+    './Assets/images/image3.jpg',
+    './Assets/images/image4.jpg',
   ];
 
   let index = 0;
