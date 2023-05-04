@@ -37,10 +37,32 @@
                     <input type="text" class="textInput" id="recipeInstructions" placeholder="Type your instructions here">
                 </div>
                 <button id="recipeSave">Save Recipe</button>
-    </form>
+            </form>
+        </div>
+        <div class="main-content active">
+          <h2>Active Box Title</h2>
+          <p>This is the active box content.</p>
+
+        </div>
+      </div>  
+        <p id="personalBook"></p>
+    </div>
+
     <p id="warning">Error - Please fill out all fields</p>
 
-    <ul id="recipesList"></ul>
+    <ul id="recipesList">
+        <li class="recipeBox" draggable="true" data-title="Recipe 1">
+            <h3>Recipe 1</h3>
+          </li>
+          <li class="recipeBox" draggable="true" data-title="Recipe 2">
+            <h3>Recipe 2</h3>
+          </li>
+          <li class="recipeBox" draggable="true" data-title="Recipe 3">
+            <h3>Recipe 3</h3>
+          </li>
+        </ul>
+
+    </ul>
     <script src="cookbook.js"></script>
     <footer>
         <p>my cookbook © 2023</p>

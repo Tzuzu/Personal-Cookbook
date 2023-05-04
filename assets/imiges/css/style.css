@@ -129,6 +129,10 @@ body {
   display: flex;
   height: 100%;
   flex-wrap: wrap;
+  background-color: #eee;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .sidebar {
@@ -179,4 +183,4 @@ body {
     height: 70%;
   }
 }
-  
+

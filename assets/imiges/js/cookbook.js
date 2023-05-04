@@ -87,3 +87,38 @@ function displayRecipesFromLocalStorage() {
 displayRecipesFromLocalStorage()
 
 
+// Get the active box element
+const activeBox = document.querySelector('.main-content.active');
+
+// Get the recipe boxes
+const recipeBoxes = document.querySelectorAll('.recipeBox');
+
+// Add event listeners to the recipe boxes
+recipeBoxes.forEach((box) => {
+  box.addEventListener('dragstart', (e) => {
+    e.dataTransfer.setData('text/plain', box.dataset.title);
+  });
+  
+  box.addEventListener('click', () => {
+    const title = box.dataset.title;
+    const recipe = findRecipeByTitle(title);
+    if (recipe) {
+      activeBox.innerHTML = `
+        <h2>${title}</h2>
+        <h3>Ingredients</h3>
+        <ul>
+          ${recipe.ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
+        </ul>
+        <h3>Instructions</h3>
+        <ol>
+          ${recipe.instructions.map(instruction => `<li>${instruction}</li>`).join('')}
+        </ol>
+      `;
+    }
+  });
+});
+
+// Find a recipe in the cookbook array by title
+function findRecipeByTitle(title) {
+  return cookbook.find((recipe) => recipe.title === title);
+}

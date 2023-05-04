@@ -88,3 +88,4 @@ var images = [
     index = (index + 1) % images.length;
     document.querySelector('.background').style.backgroundImage = `url(${images[index]})`;
 }, 5000);
+
