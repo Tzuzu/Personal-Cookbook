@@ -1,7 +1,6 @@
 var searchBar = document.getElementById('searchBar')
 var submitBtn = document.getElementById('submitBtn')
 var listResults = document.getElementById('listResults')
-
 // Function used to save a recipe to local storage
 
 function saveRecipe(recipe) {
@@ -68,7 +67,6 @@ function renderRecipeListItem(recipe) {
     }
 
 function displayRecipes(recipes) {
-    console.log(recipes)
     listResults.innerHTML = ""
 
     for (let i = 0; i <recipes.length; i++) {
@@ -79,14 +77,15 @@ function displayRecipes(recipes) {
 
 //making the bbackground image load
 var images = [
-    './assets/imiges/image1.jpg',
-    './assets/imiges/image2.jpg',
-    './assets/imiges/image3.jpg',
-    './assets/imiges/image4.jpg',
+    './Assets/images/image1.jpg',
+    './Assets/images/image2.jpg',
+    './Assets/images/image3.jpg',
+    './Assets/images/image4.jpg',
   ];
 
   let index = 0;
   setInterval(() => {
     index = (index + 1) % images.length;
     document.querySelector('.background').style.backgroundImage = `url(${images[index]})`;
-  }, 5000);
+}, 5000);
+
