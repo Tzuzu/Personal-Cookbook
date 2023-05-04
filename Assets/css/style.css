@@ -80,6 +80,10 @@ h1 {
   margin-bottom: 20px;
 }
 
+#searchResults {
+  display: none;
+}
+
 
 footer {
     position: fixed;
@@ -135,10 +139,54 @@ body {
   border-radius: 5px;
 }
 
+/* side bar working'*/
 .sidebar {
   width: 30%;
   background-color: #eee;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.textInput {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 3px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.textInput:focus {
+  outline: none;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+#recipeSave {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+#recipeSave:hover {
+  background-color: #3E8E41;
 }
 
 .main-content {
@@ -172,6 +220,7 @@ body {
   padding: 20px;
   color: black;
 }
+
 
 @media screen and (max-width: 768px) {
   .sidebar {

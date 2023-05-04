@@ -1,6 +1,7 @@
 var searchBar = document.getElementById('searchBar')
 var submitBtn = document.getElementById('submitBtn')
 var listResults = document.getElementById('listResults')
+var searchResults = document.getElementById('searchResults')
 // Function used to save a recipe to local storage
 
 function saveRecipe(recipe) {
@@ -67,6 +68,7 @@ function renderRecipeListItem(recipe) {
     }
 
 function displayRecipes(recipes) {
+    searchResults.style.display="block"
     listResults.innerHTML = ""
 
     for (let i = 0; i <recipes.length; i++) {
