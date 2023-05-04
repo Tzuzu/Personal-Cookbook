@@ -80,6 +80,10 @@ h1 {
   margin-bottom: 20px;
 }
 
+#searchResults {
+  display: none;
+}
+
 
 footer {
     position: fixed;
@@ -172,6 +176,7 @@ body {
   padding: 20px;
   color: black;
 }
+
 
 @media screen and (max-width: 768px) {
   .sidebar {
