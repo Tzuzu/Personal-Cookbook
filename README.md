@@ -8,8 +8,8 @@ To view the website, please go [here](https://tzuzu.github.io/Personal-Cookbook/
 
 ## API Used
 
-https://www.themealdb.com/api.php - Used to generate random recipes on the random recipe page
-https://api-ninjas.com/api/recipe - Used to pull and list 10 recipes when the user searches for a recipe
+* https://www.themealdb.com/api.php - Used to generate random recipes on the random recipe page
+* https://api-ninjas.com/api/recipe - Used to pull and list 10 recipes when the user searches for a recipe
 
 ## Purpose
 
