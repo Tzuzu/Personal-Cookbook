@@ -17,7 +17,8 @@
       
       <div class="page-content">
         <div class="sidebar">
-            <h2>Submit your own recipe!</h2>
+            <div>
+              <h2>Submit your own recipe!</h2>
             <form>
                 <div class="form-group">
                     <label for="recipeName">Recipe Name</label>
@@ -38,10 +39,11 @@
                 </div>
                 <button id="recipeSave">Save Recipe</button>
             </form>
+            </div>
         </div>
         <div class="main-content active">
-          <h2>Active Box Title</h2>
-          <p>This is the active box content.</p>
+          <h2>Your Recipes</h2>
+          <ul id="recipesList"></ul>
 
         </div>
       </div>  
@@ -49,19 +51,7 @@
     </div>
 
     <p id="warning">Error - Please fill out all fields</p>
-
-    <ul id="recipesList">
-        <li class="recipeBox" draggable="true" data-title="Recipe 1">
-            <h3>Recipe 1</h3>
-          </li>
-          <li class="recipeBox" draggable="true" data-title="Recipe 2">
-            <h3>Recipe 2</h3>
-          </li>
-          <li class="recipeBox" draggable="true" data-title="Recipe 3">
-            <h3>Recipe 3</h3>
-          </li>
-        </ul>
-
+    
     </ul>
     <script src="./Assets/js/cookbook.js"></script>
     <footer>
